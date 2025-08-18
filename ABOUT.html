@@ -1,4 +1,10 @@
 
+
+      
+  
+     
+      
+    
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,12 +18,22 @@
   <!-- Navbar -->
   <nav class="bg-yellow-600 text-white p-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">VT DESIGN</h1>
-    <div>
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex">
       <a href="HOME.html" class="px-4 hover:underline">Home</a>
       <a href="ABOUT.html" class="px-4 hover:underline">About</a>
       <a href="CONTACT US.html" class="px-4 hover:underline">Contact</a>
     </div>
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="md:hidden text-3xl focus:outline-none">☰</button>
   </nav>
+
+  <!-- Mobile Menu (Hidden by default) -->
+  <div id="menu" class="hidden md:hidden bg-yellow-700 text-white text-center py-4 space-y-4">
+    <a href="HOME.html" class="block hover:underline">Home</a>
+    <a href="ABOUT.html" class="block hover:underline">About</a>
+    <a href="CONTACT US.html" class="block hover:underline">Contact</a>
+  </div>
 
   <!-- About Section -->
   <section class="p-10 text-center">
@@ -114,5 +130,15 @@
     © 2025 VT DESIGN | Designed with ❤️
   </footer>
 
+  <!-- Script for Menu Toggle -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = document.getElementById("menu");
+
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
 </body>
-</html
+</html>
