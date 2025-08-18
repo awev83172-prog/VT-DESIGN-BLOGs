@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VT DESIGNS | Home</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleMenu() {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    }
+  </script>
 </head>
 <body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
   <!-- Navbar -->
   <nav class="bg-yellow-600 text-white p-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">VT DESIGNS</h1>
-    <div>
-      <a href="HOME.html" class="px-4 hover:underline">Home</a>
-      <a href="ABOUT.html" class="px-4 hover:underline">About</a>
-      <a href="CONTACT US.html" class="px-4 hover:underline">Contact</a>
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="HOME.html" class="hover:underline">Home</a>
+      <a href="ABOUT.html" class="hover:underline">About</a>
+      <a href="CONTACT US.html" class="hover:underline">Contact</a>
     </div>
+    <!-- Hamburger Menu (Mobile) -->
+    <button onclick="toggleMenu()" class="md:hidden text-3xl font-bold">=</button>
   </nav>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="hidden bg-gray-800 text-center md:hidden">
+    <a href="HOME.html" class="block py-2 hover:bg-gray-700">Home</a>
+    <a href="ABOUT.html" class="block py-2 hover:bg-gray-700">About</a>
+    <a href="CONTACT US.html" class="block py-2 hover:bg-gray-700">Contact</a>
+  </div>
 
   <!-- Header -->
   <header class="text-center py-10">
@@ -27,8 +42,8 @@
   <!-- Gallery -->
   <section class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
     <!-- Repeat 15 images -->
-    <img src="Design 1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 1.jpg">
-    <img src="Design 2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 2.jpg">
+    <img src="Design 1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 1">
+    <img src="Design 2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 2">
     <img src="Design 3.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 3">
     <img src="Design 4.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 4">
     <img src="Design 5.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 5">
@@ -50,4 +65,4 @@
   </footer>
 
 </body>
-</html>
+</html
