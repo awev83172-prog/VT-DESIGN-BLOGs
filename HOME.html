@@ -10,21 +10,38 @@
       document.getElementById("mobileMenu").classList.toggle("hidden");
     }
   </script>
+  <style>
+    /* Animated rotating text */
+    .rotate-text span {
+      display: none;
+    }
+    .rotate-text span.active {
+      display: inline;
+    }
+
+    /* Hover effects for images */
+    .design-hover {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    .design-hover:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
+    }
+  </style>
 </head>
 <body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
   <!-- Navbar -->
   <nav class="bg-yellow-600 text-white p-4 flex justify-between items-center">
     <h1 class="text-2xl font-bold">VT DESIGNS</h1>
-    <!-- Desktop Menu -->
+    
     <div class="hidden md:flex space-x-6">
       <a href="HOME.html" class="hover:underline">Home</a>
       <a href="ABOUT.html" class="hover:underline">About</a>
       <a href="CONTACT US.html" class="hover:underline">Contact</a>
     </div>
-    <!-- Hamburger Menu (Mobile) -->
     <button onclick="toggleMenu()" class="md:hidden text-3xl font-bold">=</button>
-  </nav>
+  </nav> 
 
   <!-- Mobile Dropdown Menu -->
   <div id="mobileMenu" class="hidden bg-gray-800 text-center md:hidden">
@@ -33,15 +50,29 @@
     <a href="CONTACT US.html" class="block py-2 hover:bg-gray-700">Contact</a>
   </div>
 
-  <!-- Hero Section -->
-  <section class="h-screen flex flex-col justify-center items-center text-center px-4">
-    <h2 class="text-5xl md:text-6xl font-bold text-yellow-400">Hi, I'm VT DESIGN</h2>
-    <p class="mt-4 text-lg text-gray-300 max-w-2xl">
-      I create stunning logos, posters, and brand visuals that help businesses stand out in today’s creative world.
-    </p>
-    <div class="mt-6 space-x-4">
-      <a href="ABOUT.html" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 transition">About Me</a>
-      <a href="CONTACT US.html" class="bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold py-3 px-6 rounded-full hover:bg-yellow-400 hover:text-black transition">Hire Me</a>
+  <!-- Hero Section with Background -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4 relative bg-cover bg-center" style="background-image: url('background.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-70"></div> <!-- Dark overlay -->
+    <div class="relative z-10">
+
+      <!-- Logo -->
+    <img src="Design 16.jpg" alt="VT DESIGN Logo" class="mx-auto mb-6 w-32 md:w-40 rounded-full shadow-lg border-4 border-yellow-400">
+
+
+      <h2 class="text-5xl md:text-6xl font-bold text-yellow-400">Hi, I'm VT DESIGN</h2>
+      <p class="mt-4 text-lg text-gray-300 max-w-2xl">
+        <span class="rotate-text">
+          <span class="active">Turning Ideas</span>
+          <span>Turning Dreams</span>
+          <span>Turning Concepts</span>
+          <span>Turning Visions</span>
+        </span>
+        into Stunning Designs.
+      </p>
+      <div class="mt-6 space-x-4">
+        <a href="ABOUT.html" class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 transition">About Me</a>
+        <a href="CONTACT US.html" class="bg-transparent border-2 border-yellow-400 text-yellow-400 font-bold py-3 px-6 rounded-full hover:bg-yellow-400 hover:text-black transition">Hire Me</a>
+      </div>
     </div>
   </section>
 
@@ -49,9 +80,9 @@
   <section class="p-10 text-center">
     <h2 class="text-3xl font-bold text-yellow-400 mb-6">Featured Designs</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <img src="Designs 1.jpg" alt="Design 1" class="rounded-xl shadow-lg hover:scale-105 transition">
-      <img src="Designs 2.jpg" alt="Design 2" class="rounded-xl shadow-lg hover:scale-105 transition">
-      <img src="Design 3.jpg" alt="Design 3" class="rounded-xl shadow-lg hover:scale-105 transition">
+      <img src="Designs 1.jpg" alt="Design 1" class="rounded-xl shadow-lg design-hover">
+      <img src="Designs 2.jpg" alt="Design 2" class="rounded-xl shadow-lg design-hover">
+      <img src="Design 3.jpg" alt="Design 3" class="rounded-xl shadow-lg design-hover">
     </div>
     <a href="#gallery" class="inline-block mt-6 bg-yellow-500 text-black font-bold py-3 px-6 rounded-full shadow-lg hover:bg-yellow-400 transition">See More</a>
   </section>
@@ -79,23 +110,24 @@
     </div>
   </section>
 
+
   <!-- Full Gallery -->
   <section id="gallery" class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-    <img src="Design 1.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 1">
-    <img src="Design 2.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 2">
-    <img src="Design 3.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 3">
-    <img src="Design 4.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 4">
-    <img src="Design 5.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 5">
-    <img src="Design 6.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 6">
-    <img src="Design 7.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 7">
-    <img src="Design 8.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 8">
-    <img src="Design 9.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 9">
-    <img src="Design 10.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 10">
-    <img src="Design 11.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 11">
-    <img src="Design 12.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 12">
-    <img src="Design 13.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 13">
-    <img src="Design 14.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 14">
-    <img src="Design 15.jpg" class="rounded-xl shadow-lg hover:scale-105 transition" alt="Design 15">
+    <img src="Design 1.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 1">
+    <img src="Design 2.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 2">
+    <img src="Design 3.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 3">
+    <img src="Design 4.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 4">
+    <img src="Design 5.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 5">
+    <img src="Design 6.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 6">
+    <img src="Design 7.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 7">
+    <img src="Design 8.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 8">
+    <img src="Design 9.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 9">
+    <img src="Design 10.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 10">
+    <img src="Design 11.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 11">
+    <img src="Design 12.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 12">
+    <img src="Design 13.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 13">
+    <img src="Design 14.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 14">
+    <img src="Design 15.jpg" class="rounded-xl shadow-lg design-hover" alt="Design 15">
   </section>
 
   <!-- Footer -->
@@ -103,6 +135,17 @@
     © 2025 VT DESIGN | All Rights Reserved
   </footer>
 
+  <script>
+    // Rotating Text Animation
+    const texts = document.querySelectorAll('.rotate-text span');
+    let index = 0;
+    setInterval(() => {
+      texts[index].classList.remove('active');
+      index = (index + 1) % texts.length;
+      texts[index].classList.add('active');
+    }, 2000);
+  </script>
 </body>
 </html>
+
 
