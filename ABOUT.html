@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VT DESIGN | About</title>
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
+    /* Fade-up animation */
     .fade-up {
       opacity: 0;
       transform: translateY(30px);
@@ -16,7 +19,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-    
+
     /* Hamburger animation */
     .hamburger span {
       display: block;
@@ -40,51 +43,57 @@
 
 <body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <nav class="bg-yellow-600 p-4 flex justify-between items-center">
   <h1 class="text-2xl font-bold">VT DESIGN</h1>
 
+  <!-- Desktop Menu -->
   <div class="hidden md:flex space-x-6 font-medium">
     <a href="HOME.html" class="hover:underline">Home</a>
     <a href="ABOUT.html" class="hover:underline">About</a>
     <a href="CONTACT US.html" class="hover:underline">Contact</a>
   </div>
 
-  <button onclick="toggleMenu()" class="md:hidden text-3xl">☰</button>
+  <!-- Hamburger -->
+  <button onclick="toggleMenu()" id="hamburger" class="hamburger md:hidden">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
-<!-- MOBILE MENU -->
+<!-- Mobile Menu -->
 <div id="mobileMenu" class="hidden bg-yellow-700 text-center md:hidden">
   <a href="HOME.html" class="block py-3 hover:bg-yellow-600">Home</a>
   <a href="ABOUT.html" class="block py-3 hover:bg-yellow-600">About</a>
   <a href="CONTACT US.html" class="block py-3 hover:bg-yellow-600">Contact</a>
 </div>
 
-<!-- ABOUT HERO -->
+<!-- ================= HERO ================= -->
 <section class="p-10 text-center fade-up">
   <h2 class="text-4xl md:text-5xl font-bold text-yellow-400">About VT DESIGN</h2>
   <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    I am an undergraduate creative designer from Nigeria with over <b>3 years of experience</b> 
-    in graphic design. I specialize in creating powerful visuals that help brands stand out, 
-    communicate clearly, and look professional in a competitive world.
+    I am an undergraduate creative designer from Nigeria with over
+    <span class="text-yellow-300 font-bold">3 years of experience</span> in graphic design.
+    I specialize in creating strong visuals that help brands stand out, communicate clearly,
+    and look professional.
   </p>
   <p class="mt-4 text-gray-400 italic">
-    “I may be young, but my vision is strong enough to inspire the future.”
+    “Young mind. Bold vision. Creative future.”
   </p>
 </section>
 
-<!-- JOURNEY -->
+<!-- ================= JOURNEY ================= -->
 <section class="p-10 bg-gray-900 text-center fade-up">
   <h2 class="text-3xl font-bold text-yellow-400 mb-4">My Journey</h2>
   <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    I began my design journey at the age of 12 using just my phone and free tools.
-    What started as school flyers quickly turned into real projects for entrepreneurs,
-    artists, and small businesses. Today, I focus on building strong visual identities
-    that make brands confident and unforgettable.
+    I started designing at age 12 using only my phone and free tools.
+    From school flyers to real projects for entrepreneurs and artists,
+    I’ve grown into a designer focused on building memorable brand identities.
   </p>
 </section>
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 <section class="p-10 text-center fade-up">
   <h2 class="text-3xl font-bold text-yellow-400 mb-6">Skills & Tools</h2>
 
@@ -96,86 +105,75 @@
   </div>
 
   <p class="text-gray-400 mt-4">
-    Constantly upgrading my skills with tools like Figma & Illustrator.
+    Always learning new tools like Figma & Illustrator.
   </p>
 </section>
 
-<!-- DESIGN TYPES -->
+<!-- ================= DESIGN TYPES ================= -->
 <section class="p-10 bg-gray-900 text-center fade-up">
   <h2 class="text-3xl font-bold text-yellow-400 mb-6">What I Design</h2>
 
   <div class="flex overflow-x-auto space-x-6 p-4">
-
-    <!-- Item 1 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="logo.jpg" alt="Logo Design" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Logo Design</p>
+      <img src="logo.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Logo Design</p>
     </div>
 
-    <!-- Item 2 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="poster.jpg" alt="Poster Design" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Flyers & Posters</p>
+      <img src="poster.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Flyers & Posters</p>
     </div>
 
-    <!-- Item 3 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="branding.jpg" alt="Branding" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Brand Identity</p>
+      <img src="branding.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Brand Identity</p>
     </div>
 
-    <!-- Item 4 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="socialmedia.jpg" alt="Social Media Graphics" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Social Media Graphics</p>
+      <img src="socialmedia.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Social Media Graphics</p>
     </div>
 
-    <!-- Item 5 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="albumcover.jpg" alt="Album Cover" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Album Covers</p>
+      <img src="albumcover.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Album Covers</p>
     </div>
 
-    <!-- Item 6 -->
     <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="websiteconcept.jpg" alt="Website Concept" class="rounded-lg mb-3">
-      <p class="font-bold text-yellow-300">Website Concepts</p>
+      <img src="websiteconcept.jpg" class="rounded-lg mb-3">
+      <p class="text-yellow-300 font-bold">Website Concepts</p>
     </div>
-
   </div>
 </section>
 
-
-<!-- TESTIMONIALS -->
+<!-- ================= TESTIMONIALS ================= -->
 <section class="p-10 text-center fade-up">
   <h2 class="text-3xl font-bold text-yellow-400 mb-6">What Clients Say</h2>
 
   <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
     <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Creative, fast and professional.”
+      “Creative and professional.”
       <div class="mt-4 text-yellow-300 font-bold">— Sarah</div>
     </div>
     <div class="bg-gray-800 p-6 rounded-xl italic">
-      “He turned my idea into something amazing.”
+      “Turned my idea into magic.”
       <div class="mt-4 text-yellow-300 font-bold">— Daniel</div>
     </div>
     <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Unique designs with strong impact.”
+      “Strong visual impact.”
       <div class="mt-4 text-yellow-300 font-bold">— Chinedu</div>
     </div>
     <div class="bg-gray-800 p-6 rounded-xl italic">
-      “The future of African creativity.”
+      “Future of African creativity.”
       <div class="mt-4 text-yellow-300 font-bold">— Casten Artzz</div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
+<!-- ================= CTA ================= -->
 <section class="p-10 text-center fade-up">
   <h2 class="text-3xl font-bold text-yellow-400 mb-4">Let’s Work Together</h2>
-  <p class="text-gray-300 mb-6">
-    Ready to bring your ideas to life? Message me directly.
-  </p>
+  <p class="text-gray-300 mb-6">Have an idea? Let’s bring it to life.</p>
 
   <a href="https://wa.me/2348038137679" target="_blank"
      class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition">
@@ -183,15 +181,18 @@
   </a>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="bg-black text-center text-gray-400 py-4">
   © 2025 VT DESIGN | Built with passion
 </footer>
 
-<!-- JS -->
+<!-- ================= JS ================= -->
 <script>
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
+  const menu = document.getElementById("mobileMenu");
+  const burger = document.getElementById("hamburger");
+  menu.classList.toggle("hidden");
+  burger.classList.toggle("active");
 }
 
 const observer = new IntersectionObserver(entries => {
@@ -204,6 +205,3 @@ document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 
 </body>
 </html>
-
-
-
