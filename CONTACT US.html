@@ -1,44 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VT DESIGN | Contact</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a2e0adbb5b.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-yellow-600 text-white p-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">VT DESIGN</h1>
-    <div>
-      <a href="HOME.html" class="px-4 hover:underline">Home</a>
-      <a href="ABOUT.html" class="px-4 hover:underline">About</a>
-      <a href="CONTACT US.html" class="px-4 hover:underline">Contact</a>
-    </div>
-  </nav>
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-yellow-600 p-4 flex justify-between items-center">
+  <h1 class="text-2xl font-bold">VT DESIGN</h1>
 
-  <!-- Contact Section -->
-  <section class="p-10 text-center">
-    <h2 class="text-4xl font-bold text-yellow-400">Get in Touch</h2>
-    <p class="text-gray-300 mt-2">Reach VT DESIGN through WhatsApp or Email</p>
+  <!-- Desktop Menu -->
+  <div class="hidden md:flex space-x-6">
+    <a href="HOME.html" class="hover:underline">Home</a>
+    <a href="ABOUT.html" class="hover:underline">About</a>
+    <a href="CONTACT US.html" class="hover:underline">Contact</a>
+  </div>
 
-    <div class="mt-6 space-y-4">
-      <a href="https://wa.me/2348038137679" target="_blank" class="flex items-center justify-center bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg shadow-lg transition w-60 mx-auto">
-        <i class="fab fa-whatsapp text-2xl mr-2"></i> Chat on WhatsApp
-      </a>
+  <!-- Hamburger -->
+  <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+</nav>
 
-      <a href="mailto:awev2010@gmail.com" class="flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg shadow-lg transition w-60 mx-auto">
-        <i class="fas fa-envelope text-2xl mr-2"></i> Send Email
-      </a>
-    </div>
-  </section>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden bg-yellow-700 text-center py-4 space-y-4 md:hidden">
+  <a href="HOME.html" class="block hover:underline">Home</a>
+  <a href="ABOUT.html" class="block hover:underline">About</a>
+  <a href="CONTACT US.html" class="block hover:underline">Contact</a>
+</div>
 
-  <!-- Footer -->
-  <footer class="bg-black text-center text-gray-400 py-4 mt-6">
-    © 2025 VT DESIGN | Let’s Create Magic ✨
-  </footer>
+<!-- ================= CONTACT SECTION ================= -->
+<section class="p-10 text-center animate-fadeIn">
+  <h2 class="text-4xl font-bold text-yellow-400">Get in Touch</h2>
+  <p class="text-gray-300 mt-3 max-w-xl mx-auto">
+    Ready to work together? Reach out to VT DESIGN and let’s bring your ideas to life.
+  </p>
+
+  <!-- Contact Cards -->
+  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/2348038137679" target="_blank"
+      class="bg-green-600 hover:bg-green-700 transition transform hover:-translate-y-1
+             p-6 rounded-xl shadow-lg flex items-center justify-center space-x-3">
+      <i class="fab fa-whatsapp text-3xl"></i>
+      <span class="text-lg font-bold">Chat on WhatsApp</span>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:awev2010@gmail.com"
+      class="bg-blue-600 hover:bg-blue-700 transition transform hover:-translate-y-1
+             p-6 rounded-xl shadow-lg flex items-center justify-center space-x-3">
+      <i class="fas fa-envelope text-3xl"></i>
+      <span class="text-lg font-bold">Send an Email</span>
+    </a>
+
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-black text-center text-gray-400 py-4 mt-10">
+  © 2025 VT DESIGN | Built with passion 💛
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+</script>
 
 </body>
 </html>
