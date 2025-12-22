@@ -45,8 +45,11 @@
     <a href="CONTACT US.html" class="hover:underline">Contact</a>
   </div>
 
-  <!-- Hamburger -->
-  <button id="menuBtn" class="md:hidden text-3xl">☰</button>
+  <!-- Hamburger --> <button onclick="toggleMenu()" id="hamburger" class="hamburger md:hidden">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 </nav>
 
 <!-- Mobile Menu -->
@@ -108,5 +111,6 @@ document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 
 </body>
 </html>
+
 
 
