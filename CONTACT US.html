@@ -70,15 +70,22 @@
   © 2025 VT DESIGN | Built with passion 💛
 </footer>
 
-<!-- ================= SCRIPT ================= -->
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+function toggleMenu() {
+  const menu = document.getElementById("mobileMenu");
+  const burger = document.getElementById("hamburger");
+  menu.classList.toggle("hidden");
+  burger.classList.toggle("active");
+}
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
   });
+});
+document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
 </script>
 
 </body>
 </html>
+
