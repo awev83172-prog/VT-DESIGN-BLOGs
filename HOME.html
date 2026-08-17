@@ -359,7 +359,7 @@
           </div>
 
           <div class="text-[9px] tracking-[0.25em] text-gray-500 uppercase">
-            Creative Studio
+            Your vision is our design
           </div>
         </div>
 
