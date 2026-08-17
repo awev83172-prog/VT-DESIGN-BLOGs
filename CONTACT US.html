@@ -1,116 +1,2019 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VT DESIGN | Contact</title>
-  <style>
-      /* Hamburger animation */
-    .hamburger span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      background: white;
-      margin: 5px 0;
-      transition: all 0.3s ease;
-    }
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px,5px);
-    }
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px,-5px);
-    }
-  </style>
 
-  <!-- Tailwind CSS -->
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>VT DESIGNS — Contact</title>
+
+  <meta
+    name="description"
+    content="Contact VT DESIGNS for graphic design, branding, UI/UX and web design projects."
+  >
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/a2e0adbb5b.js" crossorigin="anonymous"></script>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+
+      margin: 0;
+
+      background: #050505;
+
+      color: white;
+
+      font-family: "Inter", sans-serif;
+
+      overflow-x: hidden;
+
+    }
+
+
+    /* =========================
+       SCROLLBAR
+    ========================== */
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+
+    ::-webkit-scrollbar-thumb {
+
+      background: #d4af37;
+
+      border-radius: 20px;
+
+    }
+
+
+    /* =========================
+       GOLD TEXT
+    ========================== */
+
+    .gold-text {
+
+      background:
+        linear-gradient(
+          90deg,
+          #f5d76e,
+          #d4af37,
+          #fff1a8,
+          #d4af37
+        );
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .navbar {
+
+      background:
+        rgba(5,5,5,0.75);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.07);
+
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+
+      min-height:
+        72vh;
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      background:
+
+        radial-gradient(
+          circle at 70% 25%,
+          rgba(212,175,55,0.14),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(212,175,55,0.08),
+          transparent 30%
+        ),
+
+        #050505;
+
+    }
+
+
+    .hero-grid {
+
+      position:
+        absolute;
+
+      inset:
+        0;
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size:
+        50px 50px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black 20%,
+          transparent 100%
+        );
+
+    }
+
+
+    /* =========================
+       GLASS
+    ========================== */
+
+    .glass {
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter:
+        blur(15px);
+
+      -webkit-backdrop-filter:
+        blur(15px);
+
+      transition:
+        all 0.35s ease;
+
+    }
+
+
+    .glass:hover {
+
+      border-color:
+        rgba(212,175,55,0.35);
+
+      transform:
+        translateY(-5px);
+
+    }
+
+
+    /* =========================
+       CONTACT CARD
+    ========================== */
+
+    .contact-card {
+
+      position:
+        relative;
+
+      overflow:
+        hidden;
+
+      transition:
+        all 0.35s ease;
+
+    }
+
+
+    .contact-card::before {
+
+      content: "";
+
+      position:
+        absolute;
+
+      width:
+        150px;
+
+      height:
+        150px;
+
+      border-radius:
+        50%;
+
+      background:
+        rgba(212,175,55,0.08);
+
+      filter:
+        blur(45px);
+
+      top:
+        -80px;
+
+      right:
+        -80px;
+
+    }
+
+
+    .contact-card:hover {
+
+      transform:
+        translateY(-8px);
+
+      border-color:
+        rgba(212,175,55,0.4);
+
+      box-shadow:
+        0 20px 60px
+        rgba(212,175,55,0.08);
+
+    }
+
+
+    /* =========================
+       ICON BOX
+    ========================== */
+
+    .icon-box {
+
+      transition:
+        all 0.35s ease;
+
+    }
+
+
+    .contact-card:hover .icon-box {
+
+      transform:
+        scale(1.1)
+        rotate(-5deg);
+
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================== */
+
+    .gold-button {
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5d76e,
+          #d4af37
+        );
+
+      color:
+        #050505;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .gold-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 15px 40px
+        rgba(212,175,55,0.25);
+
+    }
+
+
+    .outline-button {
+
+      border:
+        1px solid
+        rgba(212,175,55,0.55);
+
+      color:
+        #f5d76e;
+
+      transition:
+        all 0.3s ease;
+
+    }
+
+
+    .outline-button:hover {
+
+      background:
+        #d4af37;
+
+      color:
+        #050505;
+
+      transform:
+        translateY(-3px);
+
+    }
+
+
+    /* =========================
+       REVEAL
+    ========================== */
+
+    .reveal {
+
+      opacity:
+        0;
+
+      transform:
+        translateY(35px);
+
+      transition:
+        all 0.8s ease;
+
+    }
+
+
+    .reveal.active {
+
+      opacity:
+        1;
+
+      transform:
+        translateY(0);
+
+    }
+
+
+    /* =========================
+       FLOATING CIRCLE
+    ========================== */
+
+    .floating-circle {
+
+      position:
+        absolute;
+
+      border:
+        1px solid
+        rgba(212,175,55,0.12);
+
+      border-radius:
+        50%;
+
+      animation:
+        floatCircle 8s ease-in-out infinite;
+
+    }
+
+
+    @keyframes floatCircle {
+
+      0%,100% {
+
+        transform:
+          translateY(0)
+          rotate(0deg);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-20px)
+          rotate(10deg);
+
+      }
+
+    }
+
+
+    /* =========================
+       WHATSAPP GLOW
+    ========================== */
+
+    .whatsapp-card:hover {
+
+      box-shadow:
+        0 20px 70px
+        rgba(37,211,102,0.08);
+
+    }
+
+
+    /* =========================
+       EMAIL GLOW
+    ========================== */
+
+    .email-card:hover {
+
+      box-shadow:
+        0 20px 70px
+        rgba(59,130,246,0.08);
+
+    }
+
+
+    /* =========================
+       FAQ
+    ========================== */
+
+    .faq-item {
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.07);
+
+    }
+
+
+    .faq-answer {
+
+      max-height:
+        0;
+
+      overflow:
+        hidden;
+
+      transition:
+        max-height 0.4s ease;
+
+    }
+
+
+    .faq-item.open .faq-answer {
+
+      max-height:
+        200px;
+
+    }
+
+
+    .faq-item.open .faq-icon {
+
+      transform:
+        rotate(45deg);
+
+    }
+
+
+    .faq-icon {
+
+      transition:
+        transform 0.3s ease;
+
+    }
+
+
+  </style>
+
 </head>
 
-<body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="bg-yellow-600 p-4 flex justify-between items-center">
-  <h1 class="text-2xl font-bold">VT DESIGN</h1>
+<body>
 
-  <!-- Desktop Menu -->
-  <div class="hidden md:flex space-x-6">
-    <a href="HOME.html" class="hover:underline">Home</a>
-    <a href="ABOUT.html" class="hover:underline">About</a>
-    <a href="CONTACT US.html" class="hover:underline">Contact</a>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<header
+  class="navbar fixed top-0 left-0 w-full z-50"
+>
+
+  <nav
+    class="max-w-7xl mx-auto px-5 lg:px-8"
+  >
+
+    <div
+      class="h-20 flex items-center justify-between"
+    >
+
+
+      <!-- BRAND -->
+
+      <a
+        href="HOME.html"
+        class="flex items-center gap-3"
+      >
+
+        <div
+          class="w-11 h-11 rounded-full overflow-hidden border border-yellow-500/60"
+        >
+
+          <img
+            src="Untitled designbb.png"
+            alt="VT Designs Logo"
+            class="w-full h-full object-cover"
+          >
+
+        </div>
+
+
+        <div>
+
+          <div
+            class="font-black text-lg tracking-tight"
+          >
+
+            VT
+
+            <span class="text-yellow-400">
+              DESIGNS
+            </span>
+
+          </div>
+
+
+          <div
+            class="text-[9px] uppercase tracking-[0.25em] text-gray-500"
+          >
+
+            Creative Studio
+
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- DESKTOP NAV -->
+
+      <div
+        class="hidden md:flex items-center gap-9 text-sm font-medium"
+      >
+
+        <a
+          href="HOME.html"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Home
+        </a>
+
+
+        <a
+          href="ABOUT.html"
+          class="text-gray-400 hover:text-white transition"
+        >
+          About
+        </a>
+
+
+        <a
+          href="HOME.html#services"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Services
+        </a>
+
+
+        <a
+          href="HOME.html#portfolio"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Portfolio
+        </a>
+
+
+        <a
+          href="CONTACT US.html"
+          class="text-yellow-400"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- CTA -->
+
+      <a
+        href="#contact"
+        class="hidden md:flex gold-button px-5 py-2.5 rounded-full font-bold text-sm items-center gap-2"
+      >
+
+        Let's Talk
+
+        <i
+          data-lucide="arrow-up-right"
+          class="w-4 h-4"
+        ></i>
+
+      </a>
+
+
+      <!-- MOBILE -->
+
+      <button
+        onclick="toggleMenu()"
+        class="md:hidden glass w-11 h-11 rounded-full flex items-center justify-center"
+      >
+
+        <i
+          data-lucide="menu"
+        ></i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MOBILE MENU -->
+
+  <div
+    id="mobileMenu"
+    class="hidden md:hidden border-t border-white/10 bg-black/95"
+  >
+
+    <div
+      class="px-5 py-5 space-y-2"
+    >
+
+      <a
+        href="HOME.html"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Home
+      </a>
+
+
+      <a
+        href="ABOUT.html"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        About
+      </a>
+
+
+      <a
+        href="HOME.html#services"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Services
+      </a>
+
+
+      <a
+        href="HOME.html#portfolio"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Portfolio
+      </a>
+
+
+      <a
+        href="CONTACT US.html"
+        class="block px-4 py-3 rounded-xl bg-yellow-500/10 text-yellow-400"
+      >
+        Contact
+      </a>
+
+    </div>
+
   </div>
 
-  <!-- Hamburger --> <button onclick="toggleMenu()" id="hamburger" class="hamburger md:hidden">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+</header>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden bg-yellow-700 text-center py-4 space-y-4 md:hidden">
-  <a href="HOME.html" class="block hover:underline">Home</a>
-  <a href="ABOUT.html" class="block hover:underline">About</a>
-  <a href="CONTACT US.html" class="block hover:underline">Contact</a>
-</div>
 
-<!-- ================= CONTACT SECTION ================= -->
-<section class="p-10 text-center animate-fadeIn">
-  <h2 class="text-4xl font-bold text-yellow-400">Get in Touch</h2>
-  <p class="text-gray-300 mt-3 max-w-xl mx-auto">
-    Ready to work together? Reach out to VT DESIGN and let’s bring your ideas to life.
-  </p>
 
-  <!-- Contact Cards -->
-  <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+<!-- =====================================================
+     HERO
+====================================================== -->
 
-    <!-- WhatsApp -->
-    <a href="https://wa.me/2348038137679" target="_blank"
-      class="bg-green-600 hover:bg-green-700 transition transform hover:-translate-y-1
-             p-6 rounded-xl shadow-lg flex items-center justify-center space-x-3">
-      <i class="fab fa-whatsapp text-3xl"></i>
-      <span class="text-lg font-bold">Chat on WhatsApp</span>
-    </a>
+<section
+  class="hero pt-32 pb-20"
+>
 
-    <!-- Email -->
-    <a href="mailto:awev2010@gmail.com"
-      class="bg-blue-600 hover:bg-blue-700 transition transform hover:-translate-y-1
-             p-6 rounded-xl shadow-lg flex items-center justify-center space-x-3">
-      <i class="fas fa-envelope text-3xl"></i>
-      <span class="text-lg font-bold">Send an Email</span>
-    </a>
+  <div class="hero-grid"></div>
+
+
+  <!-- Decorative circles -->
+
+  <div
+    class="floating-circle w-72 h-72 -top-20 -right-20"
+  ></div>
+
+
+  <div
+    class="floating-circle w-96 h-96 -bottom-52 -left-52"
+    style="animation-delay:2s"
+  ></div>
+
+
+  <div
+    class="max-w-7xl mx-auto px-5 lg:px-8 relative z-10"
+  >
+
+    <div
+      class="max-w-3xl mx-auto text-center reveal"
+    >
+
+
+      <div
+        class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-7"
+      >
+
+        <span
+          class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+        ></span>
+
+        <span
+          class="text-xs uppercase tracking-[0.18em] text-gray-300"
+        >
+
+          Let's create something
+
+        </span>
+
+      </div>
+
+
+      <h1
+        class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]"
+      >
+
+        Let's bring your
+
+        <br>
+
+        <span class="gold-text">
+          idea to life.
+        </span>
+
+      </h1>
+
+
+      <p
+        class="text-gray-400 text-base sm:text-lg leading-8 max-w-2xl mx-auto mt-7"
+      >
+
+        Have a project in mind, need a design,
+        or simply want to discuss an idea?
+
+        I'd love to hear from you.
+
+      </p>
+
+
+      <div
+        class="flex justify-center flex-wrap gap-4 mt-9"
+      >
+
+        <a
+          href="https://wa.me/2348038137679"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gold-button px-7 py-3.5 rounded-full font-bold flex items-center gap-2"
+        >
+
+          <i
+            data-lucide="message-circle"
+            class="w-5 h-5"
+          ></i>
+
+          WhatsApp Me
+
+        </a>
+
+
+        <a
+          href="mailto:awev2010@gmail.com"
+          class="outline-button px-7 py-3.5 rounded-full font-bold flex items-center gap-2"
+        >
+
+          <i
+            data-lucide="mail"
+            class="w-5 h-5"
+          ></i>
+
+          Send Email
+
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
+
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-black text-center text-gray-400 py-4 mt-10">
-  © 2025 VT DESIGN | Built with passion 💛
+
+
+<!-- =====================================================
+     CONTACT CARDS
+====================================================== -->
+
+<section
+  id="contact"
+  class="py-24"
+>
+
+  <div
+    class="max-w-5xl mx-auto px-5 lg:px-8"
+  >
+
+
+    <div
+      class="grid md:grid-cols-2 gap-6"
+    >
+
+
+      <!-- WHATSAPP -->
+
+      <a
+        href="https://wa.me/2348038137679"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="contact-card whatsapp-card glass rounded-3xl p-8 reveal"
+      >
+
+        <div
+          class="icon-box w-16 h-16 rounded-2xl bg-green-500/10 flex items-center justify-center"
+        >
+
+          <i
+            data-lucide="message-circle"
+            class="w-8 h-8 text-green-400"
+          ></i>
+
+        </div>
+
+
+        <div class="mt-8">
+
+          <span
+            class="text-xs uppercase tracking-[0.2em] text-green-400"
+          >
+            Fastest Response
+          </span>
+
+
+          <h2
+            class="text-2xl font-bold mt-2"
+          >
+            Chat on WhatsApp
+          </h2>
+
+
+          <p
+            class="text-gray-500 text-sm leading-7 mt-3"
+          >
+
+            Send me a message directly on WhatsApp.
+            Perfect for quick project discussions,
+            questions and enquiries.
+
+          </p>
+
+
+          <div
+            class="flex items-center gap-2 text-green-400 font-semibold text-sm mt-7"
+          >
+
+            Start a conversation
+
+            <i
+              data-lucide="arrow-up-right"
+              class="w-4 h-4"
+            ></i>
+
+          </div>
+
+        </div>
+
+      </a>
+
+
+
+      <!-- EMAIL -->
+
+      <a
+        href="mailto:awev2010@gmail.com"
+        class="contact-card email-card glass rounded-3xl p-8 reveal"
+      >
+
+        <div
+          class="icon-box w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center"
+        >
+
+          <i
+            data-lucide="mail"
+            class="w-8 h-8 text-blue-400"
+          ></i>
+
+        </div>
+
+
+        <div class="mt-8">
+
+          <span
+            class="text-xs uppercase tracking-[0.2em] text-blue-400"
+          >
+            Professional Enquiries
+          </span>
+
+
+          <h2
+            class="text-2xl font-bold mt-2"
+          >
+            Send an Email
+          </h2>
+
+
+          <p
+            class="text-gray-500 text-sm leading-7 mt-3"
+          >
+
+            For project briefs, collaborations,
+            business enquiries and detailed
+            conversations.
+
+          </p>
+
+
+          <div
+            class="flex items-center gap-2 text-blue-400 font-semibold text-sm mt-7"
+          >
+
+            Send an email
+
+            <i
+              data-lucide="arrow-up-right"
+              class="w-4 h-4"
+            ></i>
+
+          </div>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT INFORMATION
+====================================================== -->
+
+<section
+  class="py-24 bg-[#080808]"
+>
+
+  <div
+    class="max-w-7xl mx-auto px-5 lg:px-8"
+  >
+
+    <div
+      class="grid lg:grid-cols-2 gap-16 items-center"
+    >
+
+
+      <!-- TEXT -->
+
+      <div class="reveal">
+
+        <p
+          class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Get In Touch
+        </p>
+
+
+        <h2
+          class="text-4xl sm:text-5xl font-black leading-tight mt-4"
+        >
+
+          Tell me what you're
+
+          <span class="gold-text">
+            working on.
+          </span>
+
+        </h2>
+
+
+        <p
+          class="text-gray-500 leading-8 mt-6 max-w-xl"
+        >
+
+          Whether you already have a complete project brief
+          or just a rough idea, that's completely fine.
+
+          Tell me what you need and we'll figure out
+          the best direction together.
+
+        </p>
+
+
+        <!-- CONTACT INFO -->
+
+        <div
+          class="space-y-5 mt-10"
+        >
+
+
+          <div
+            class="flex items-center gap-4"
+          >
+
+            <div
+              class="w-12 h-12 rounded-xl glass flex items-center justify-center"
+            >
+
+              <i
+                data-lucide="mail"
+                class="text-yellow-400"
+              ></i>
+
+            </div>
+
+
+            <div>
+
+              <p
+                class="text-xs text-gray-600 uppercase tracking-widest"
+              >
+                Email
+              </p>
+
+              <a
+                href="mailto:awev2010@gmail.com"
+                class="text-sm font-semibold hover:text-yellow-400 transition"
+              >
+                awev2010@gmail.com
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="flex items-center gap-4"
+          >
+
+            <div
+              class="w-12 h-12 rounded-xl glass flex items-center justify-center"
+            >
+
+              <i
+                data-lucide="phone"
+                class="text-yellow-400"
+              ></i>
+
+            </div>
+
+
+            <div>
+
+              <p
+                class="text-xs text-gray-600 uppercase tracking-widest"
+              >
+                WhatsApp
+              </p>
+
+              <a
+                href="https://wa.me/2348038137679"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm font-semibold hover:text-yellow-400 transition"
+              >
+                +234 803 813 7679
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div
+            class="flex items-center gap-4"
+          >
+
+            <div
+              class="w-12 h-12 rounded-xl glass flex items-center justify-center"
+            >
+
+              <i
+                data-lucide="map-pin"
+                class="text-yellow-400"
+              ></i>
+
+            </div>
+
+
+            <div>
+
+              <p
+                class="text-xs text-gray-600 uppercase tracking-widest"
+              >
+                Location
+              </p>
+
+              <p class="text-sm font-semibold">
+                Nigeria
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT CARD -->
+
+      <div
+        class="glass rounded-3xl p-8 sm:p-10 reveal"
+      >
+
+
+        <div
+          class="flex items-center justify-between"
+        >
+
+          <div>
+
+            <p
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Availability
+            </p>
+
+            <h3
+              class="text-2xl font-bold mt-2"
+            >
+              Let's work together.
+            </h3>
+
+          </div>
+
+
+          <div
+            class="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center"
+          >
+
+            <span
+              class="w-3 h-3 bg-green-400 rounded-full animate-pulse"
+            ></span>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="border-t border-white/5 mt-8 pt-8 space-y-6"
+        >
+
+
+          <div>
+
+            <div
+              class="flex justify-between text-sm mb-2"
+            >
+
+              <span class="text-gray-400">
+                Graphic Design
+              </span>
+
+              <span class="text-yellow-400">
+                Available
+              </span>
+
+            </div>
+
+            <div
+              class="h-1 bg-white/5 rounded-full overflow-hidden"
+            >
+
+              <div
+                class="h-full bg-yellow-500 w-[90%]"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <div
+              class="flex justify-between text-sm mb-2"
+            >
+
+              <span class="text-gray-400">
+                Branding
+              </span>
+
+              <span class="text-yellow-400">
+                Available
+              </span>
+
+            </div>
+
+            <div
+              class="h-1 bg-white/5 rounded-full overflow-hidden"
+            >
+
+              <div
+                class="h-full bg-yellow-500 w-[85%]"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <div
+              class="flex justify-between text-sm mb-2"
+            >
+
+              <span class="text-gray-400">
+                UI / UX
+              </span>
+
+              <span class="text-yellow-400">
+                Available
+              </span>
+
+            </div>
+
+            <div
+              class="h-1 bg-white/5 rounded-full overflow-hidden"
+            >
+
+              <div
+                class="h-full bg-yellow-500 w-[75%]"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <div>
+
+            <div
+              class="flex justify-between text-sm mb-2"
+            >
+
+              <span class="text-gray-400">
+                Web Design
+              </span>
+
+              <span class="text-yellow-400">
+                Available
+              </span>
+
+            </div>
+
+            <div
+              class="h-1 bg-white/5 rounded-full overflow-hidden"
+            >
+
+              <div
+                class="h-full bg-yellow-500 w-[80%]"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <a
+          href="https://wa.me/2348038137679"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gold-button mt-9 w-full py-4 rounded-xl font-bold flex items-center justify-center gap-2"
+        >
+
+          Start Your Project
+
+          <i
+            data-lucide="arrow-up-right"
+            class="w-5 h-5"
+          ></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+====================================================== -->
+
+<section
+  class="py-28"
+>
+
+  <div
+    class="max-w-4xl mx-auto px-5 lg:px-8"
+  >
+
+
+    <div
+      class="text-center reveal"
+    >
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        FAQ
+      </p>
+
+
+      <h2
+        class="text-4xl sm:text-5xl font-black mt-4"
+      >
+
+        Before you
+
+        <span class="gold-text">
+          reach out.
+        </span>
+
+      </h2>
+
+    </div>
+
+
+    <div
+      class="mt-14"
+    >
+
+
+      <!-- FAQ 1 -->
+
+      <div
+        class="faq-item py-6 reveal"
+      >
+
+        <button
+          onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between text-left"
+        >
+
+          <span
+            class="font-semibold text-lg"
+          >
+            What kind of designs do you create?
+          </span>
+
+
+          <span
+            class="faq-icon w-9 h-9 rounded-full glass flex items-center justify-center flex-shrink-0"
+          >
+
+            <i
+              data-lucide="plus"
+              class="w-4 h-4"
+            ></i>
+
+          </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+          <p
+            class="text-gray-500 leading-7 pt-4 max-w-2xl"
+          >
+
+            I create logos, flyers, posters, social media
+            graphics, brand identities, album covers,
+            UI/UX concepts and modern web designs.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 2 -->
+
+      <div
+        class="faq-item py-6 reveal"
+      >
+
+        <button
+          onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between text-left"
+        >
+
+          <span
+            class="font-semibold text-lg"
+          >
+            How do I start a project?
+          </span>
+
+
+          <span
+            class="faq-icon w-9 h-9 rounded-full glass flex items-center justify-center flex-shrink-0"
+          >
+
+            <i
+              data-lucide="plus"
+              class="w-4 h-4"
+            ></i>
+
+          </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+          <p
+            class="text-gray-500 leading-7 pt-4 max-w-2xl"
+          >
+
+            Simply send me a message on WhatsApp or email
+            explaining what you need. We can then discuss
+            your idea, requirements, timeline and pricing.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 3 -->
+
+      <div
+        class="faq-item py-6 reveal"
+      >
+
+        <button
+          onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between text-left"
+        >
+
+          <span
+            class="font-semibold text-lg"
+          >
+            Can I request revisions?
+          </span>
+
+
+          <span
+            class="faq-icon w-9 h-9 rounded-full glass flex items-center justify-center flex-shrink-0"
+          >
+
+            <i
+              data-lucide="plus"
+              class="w-4 h-4"
+            ></i>
+
+          </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+          <p
+            class="text-gray-500 leading-7 pt-4 max-w-2xl"
+          >
+
+            Yes. Feedback is an important part of the design
+            process. We'll work through revisions until the
+            design is heading in the right direction.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- FAQ 4 -->
+
+      <div
+        class="faq-item py-6 reveal"
+      >
+
+        <button
+          onclick="toggleFaq(this)"
+          class="w-full flex items-center justify-between text-left"
+        >
+
+          <span
+            class="font-semibold text-lg"
+          >
+            How quickly can my project be completed?
+          </span>
+
+
+          <span
+            class="faq-icon w-9 h-9 rounded-full glass flex items-center justify-center flex-shrink-0"
+          >
+
+            <i
+              data-lucide="plus"
+              class="w-4 h-4"
+            ></i>
+
+          </span>
+
+        </button>
+
+
+        <div class="faq-answer">
+
+          <p
+            class="text-gray-500 leading-7 pt-4 max-w-2xl"
+          >
+
+            Delivery time depends on the complexity of the
+            project. Once I understand your requirements,
+            I'll give you a clear expected timeline.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FINAL CTA
+====================================================== -->
+
+<section
+  class="px-5 py-20"
+>
+
+  <div
+    class="max-w-6xl mx-auto relative overflow-hidden rounded-[2rem] border border-yellow-500/20 bg-gradient-to-br from-yellow-500/10 to-transparent p-10 sm:p-16 text-center reveal"
+  >
+
+
+    <div
+      class="absolute w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl -top-40 left-1/2 -translate-x-1/2"
+    ></div>
+
+
+    <div class="relative">
+
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        Your idea starts here
+      </p>
+
+
+      <h2
+        class="text-4xl sm:text-6xl font-black mt-5"
+      >
+
+        Ready to create
+
+        <span class="gold-text">
+          something?
+        </span>
+
+      </h2>
+
+
+      <p
+        class="text-gray-500 max-w-xl mx-auto mt-5 leading-7"
+      >
+
+        Don't overthink it. Send me a message,
+        tell me what you have in mind and let's
+        take it from there.
+
+      </p>
+
+
+      <a
+        href="https://wa.me/2348038137679"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex gold-button px-8 py-4 rounded-full font-bold mt-9 items-center gap-2"
+      >
+
+        <i
+          data-lucide="message-circle"
+          class="w-5 h-5"
+        ></i>
+
+        Let's Talk
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer
+  class="border-t border-white/5 bg-[#030303]"
+>
+
+  <div
+    class="max-w-7xl mx-auto px-5 lg:px-8 py-14"
+  >
+
+
+    <div
+      class="grid md:grid-cols-3 gap-10"
+    >
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <div
+          class="flex items-center gap-3"
+        >
+
+          <div
+            class="w-10 h-10 rounded-full overflow-hidden border border-yellow-500/50"
+          >
+
+            <img
+              src="Untitled designbb.png"
+              alt="VT Designs"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+
+          <span class="font-black">
+
+            VT
+
+            <span class="text-yellow-400">
+              DESIGNS
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <p
+          class="text-gray-600 text-sm leading-7 mt-5 max-w-sm"
+        >
+
+          Turning ideas, dreams and visions into
+          stunning visual experiences.
+
+        </p>
+
+      </div>
+
+
+      <!-- NAVIGATION -->
+
+      <div>
+
+        <h3
+          class="font-bold text-sm uppercase tracking-widest"
+        >
+          Navigation
+        </h3>
+
+
+        <div
+          class="space-y-3 mt-5 text-sm text-gray-500"
+        >
+
+          <a
+            href="HOME.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            Home
+          </a>
+
+
+          <a
+            href="ABOUT.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            About
+          </a>
+
+
+          <a
+            href="HOME.html#services"
+            class="block hover:text-yellow-400 transition"
+          >
+            Services
+          </a>
+
+
+          <a
+            href="HOME.html#portfolio"
+            class="block hover:text-yellow-400 transition"
+          >
+            Portfolio
+          </a>
+
+
+          <a
+            href="CONTACT US.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONNECT -->
+
+      <div>
+
+        <h3
+          class="font-bold text-sm uppercase tracking-widest"
+        >
+          Contact
+        </h3>
+
+
+        <p
+          class="text-gray-600 text-sm mt-5"
+        >
+          Nigeria
+        </p>
+
+
+        <a
+          href="mailto:awev2010@gmail.com"
+          class="block text-gray-500 hover:text-yellow-400 transition text-sm mt-2"
+        >
+          awev2010@gmail.com
+        </a>
+
+
+        <a
+          href="https://wa.me/2348038137679"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-yellow-400 font-semibold text-sm mt-5"
+        >
+
+          WhatsApp
+
+          <i
+            data-lucide="arrow-up-right"
+            class="w-4 h-4"
+          ></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="border-t border-white/5 mt-12 pt-7 flex flex-col sm:flex-row justify-between gap-4 text-xs text-gray-600"
+    >
+
+      <p>
+        © 2026 VT DESIGNS. All Rights Reserved.
+      </p>
+
+
+      <p>
+        Designed & Built by VT DESIGNS
+      </p>
+
+    </div>
+
+  </div>
+
 </footer>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const burger = document.getElementById("hamburger");
-  menu.classList.toggle("hidden");
-  burger.classList.toggle("active");
-}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("show");
-  });
-});
-document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+  /* =========================
+     ICONS
+  ========================== */
+
+  lucide.createIcons();
+
+
+
+  /* =========================
+     MOBILE MENU
+  ========================== */
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("mobileMenu");
+
+    menu.classList.toggle("hidden");
+
+  }
+
+
+
+  /* =========================
+     SCROLL REVEAL
+  ========================== */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+  const observer =
+    new IntersectionObserver(
+
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (
+            entry.isIntersecting
+          ) {
+
+            entry.target.classList.add(
+              "active"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+  revealElements.forEach(
+    element => observer.observe(element)
+  );
+
+
+
+  /* =========================
+     FAQ
+  ========================== */
+
+  function toggleFaq(button) {
+
+    const item =
+      button.parentElement;
+
+    const allItems =
+      document.querySelectorAll(
+        ".faq-item"
+      );
+
+
+    allItems.forEach(
+      otherItem => {
+
+        if (
+          otherItem !== item
+        ) {
+
+          otherItem.classList.remove(
+            "open"
+          );
+
+        }
+
+      }
+    );
+
+
+    item.classList.toggle(
+      "open"
+    );
+
+  }
+
+
 </script>
 
+
 </body>
+
 </html>
-
-
-
+```
