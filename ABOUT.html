@@ -1,208 +1,1996 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VT DESIGN | About</title>
+
+  <title>VT DESIGNS — About</title>
+
+  <meta
+    name="description"
+    content="Learn more about VT DESIGNS, a creative designer focused on graphic design, branding, digital experiences and visual storytelling."
+  >
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+
   <style>
-    /* Fade-up animation */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s ease;
-    }
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
     }
 
-    /* Hamburger animation */
-    .hamburger span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      background: white;
-      margin: 5px 0;
-      transition: all 0.3s ease;
+    body {
+      margin: 0;
+      background: #050505;
+      color: white;
+      font-family: "Inter", sans-serif;
+      overflow-x: hidden;
     }
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(5px,5px);
+
+
+    /* =========================
+       SCROLLBAR
+    ========================== */
+
+    ::-webkit-scrollbar {
+      width: 8px;
     }
-    .hamburger.active span:nth-child(2) {
+
+    ::-webkit-scrollbar-track {
+      background: #050505;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #d4af37;
+      border-radius: 20px;
+    }
+
+
+    /* =========================
+       GOLD TEXT
+    ========================== */
+
+    .gold-text {
+
+      background:
+        linear-gradient(
+          90deg,
+          #f5d76e,
+          #d4af37,
+          #fff1a8,
+          #d4af37
+        );
+
+      -webkit-background-clip: text;
+      background-clip: text;
+
+      color: transparent;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .navbar {
+
+      background: rgba(5, 5, 5, 0.75);
+
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+
+      border-bottom:
+        1px solid rgba(255,255,255,0.07);
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+
+      min-height: 75vh;
+
+      background:
+
+        radial-gradient(
+          circle at 70% 30%,
+          rgba(212,175,55,0.13),
+          transparent 30%
+        ),
+
+        radial-gradient(
+          circle at 10% 80%,
+          rgba(212,175,55,0.08),
+          transparent 30%
+        ),
+
+        #050505;
+    }
+
+
+    .hero-grid {
+
+      background-image:
+
+        linear-gradient(
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        ),
+
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 50px 50px;
+
+      mask-image:
+        linear-gradient(
+          to bottom,
+          black 20%,
+          transparent 100%
+        );
+    }
+
+
+    /* =========================
+       GLASS
+    ========================== */
+
+    .glass {
+
+      background:
+        rgba(255,255,255,0.035);
+
+      border:
+        1px solid rgba(255,255,255,0.08);
+
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+
+      transition:
+        border-color 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+    }
+
+    .glass:hover {
+
+      border-color:
+        rgba(212,175,55,0.35);
+
+    }
+
+
+    /* =========================
+       PROFILE
+    ========================== */
+
+    .profile-ring {
+
+      position: relative;
+    }
+
+    .profile-ring::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: -8px;
+
+      border-radius: 50%;
+
+      background:
+        conic-gradient(
+          from 0deg,
+          #d4af37,
+          transparent,
+          #f5d76e,
+          transparent,
+          #d4af37
+        );
+
+      animation:
+        rotateRing 8s linear infinite;
+    }
+
+    .profile-ring::after {
+
+      content: "";
+
+      position: absolute;
+
+      inset: -25px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(212,175,55,0.12);
+    }
+
+    @keyframes rotateRing {
+
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+
+    /* =========================
+       REVEAL
+    ========================== */
+
+    .reveal {
+
       opacity: 0;
+
+      transform:
+        translateY(35px);
+
+      transition:
+        all 0.8s ease;
     }
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(5px,-5px);
+
+    .reveal.active {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
     }
+
+
+    /* =========================
+       BUTTON
+    ========================== */
+
+    .gold-button {
+
+      background:
+        linear-gradient(
+          135deg,
+          #f5d76e,
+          #d4af37
+        );
+
+      color: #050505;
+
+      transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    }
+
+    .gold-button:hover {
+
+      transform:
+        translateY(-3px);
+
+      box-shadow:
+        0 15px 40px
+        rgba(212,175,55,0.22);
+    }
+
+
+    .outline-button {
+
+      border:
+        1px solid rgba(212,175,55,0.55);
+
+      color:
+        #f5d76e;
+
+      transition:
+        all 0.3s ease;
+    }
+
+    .outline-button:hover {
+
+      background:
+        #d4af37;
+
+      color:
+        #050505;
+
+      transform:
+        translateY(-3px);
+    }
+
+
+    /* =========================
+       TIMELINE
+    ========================== */
+
+    .timeline-line {
+
+      position: absolute;
+
+      left: 25px;
+
+      top: 25px;
+
+      bottom: 25px;
+
+      width: 1px;
+
+      background:
+        linear-gradient(
+          to bottom,
+          #d4af37,
+          rgba(212,175,55,0.05)
+        );
+    }
+
+
+    /* =========================
+       SKILL CARD
+    ========================== */
+
+    .skill-card {
+
+      transition:
+        all 0.3s ease;
+    }
+
+    .skill-card:hover {
+
+      transform:
+        translateY(-6px);
+
+      background:
+        rgba(212,175,55,0.06);
+    }
+
+
+    /* =========================
+       DESIGN CARDS
+    ========================== */
+
+    .design-card {
+
+      position: relative;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      height: 300px;
+    }
+
+    .design-card img {
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      transition:
+        transform 0.6s ease;
+    }
+
+    .design-card:hover img {
+
+      transform:
+        scale(1.08);
+    }
+
+    .design-overlay {
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: flex-end;
+
+      padding: 25px;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,0.9),
+          rgba(0,0,0,0.15),
+          transparent
+        );
+    }
+
+
+    /* =========================
+       QUOTE
+    ========================== */
+
+    .quote-mark {
+
+      font-size: 90px;
+
+      line-height: 1;
+
+      color:
+        rgba(212,175,55,0.12);
+
+      font-family: Georgia, serif;
+    }
+
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    #mobileMenu {
+
+      transition:
+        all 0.3s ease;
+    }
+
+
   </style>
+
 </head>
 
-<body class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white font-sans">
 
-<!-- ================= NAVBAR ================= -->
-<nav class="bg-yellow-600 p-4 flex justify-between items-center">
-  <h1 class="text-2xl font-bold">VT DESIGN</h1>
+<body>
 
-  <!-- Desktop Menu -->
-  <div class="hidden md:flex space-x-6 font-medium">
-    <a href="HOME.html" class="hover:underline">Home</a>
-    <a href="ABOUT.html" class="hover:underline">About</a>
-    <a href="CONTACT US.html" class="hover:underline">Contact</a>
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<header class="navbar fixed top-0 left-0 w-full z-50">
+
+  <nav class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div class="h-20 flex items-center justify-between">
+
+
+      <!-- BRAND -->
+
+      <a
+        href="HOME.html"
+        class="flex items-center gap-3"
+      >
+
+        <div
+          class="w-11 h-11 rounded-full overflow-hidden border border-yellow-500/60"
+        >
+
+          <img
+            src="Untitled designbb.png"
+            alt="VT Designs Logo"
+            class="w-full h-full object-cover"
+          >
+
+        </div>
+
+
+        <div>
+
+          <div class="font-black text-lg tracking-tight">
+
+            VT
+            <span class="text-yellow-400">
+              DESIGNS
+            </span>
+
+          </div>
+
+          <div
+            class="text-[9px] uppercase tracking-[0.25em] text-gray-500"
+          >
+            Creative Studio
+          </div>
+
+        </div>
+
+      </a>
+
+
+      <!-- DESKTOP NAV -->
+
+      <div
+        class="hidden md:flex items-center gap-9 text-sm font-medium"
+      >
+
+        <a
+          href="HOME.html"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Home
+        </a>
+
+        <a
+          href="ABOUT.html"
+          class="text-yellow-400"
+        >
+          About
+        </a>
+
+        <a
+          href="HOME.html#services"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Services
+        </a>
+
+        <a
+          href="HOME.html#portfolio"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Portfolio
+        </a>
+
+        <a
+          href="CONTACT US.html"
+          class="text-gray-400 hover:text-white transition"
+        >
+          Contact
+        </a>
+
+      </div>
+
+
+      <!-- CTA -->
+
+      <a
+        href="CONTACT US.html"
+        class="hidden md:flex gold-button px-5 py-2.5 rounded-full font-bold text-sm items-center gap-2"
+      >
+
+        Let's Work
+
+        <i
+          data-lucide="arrow-up-right"
+          class="w-4 h-4"
+        ></i>
+
+      </a>
+
+
+      <!-- MOBILE -->
+
+      <button
+        id="menuButton"
+        onclick="toggleMenu()"
+        class="md:hidden glass w-11 h-11 rounded-full flex items-center justify-center"
+      >
+
+        <i
+          data-lucide="menu"
+          id="menuIcon"
+        ></i>
+
+      </button>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MOBILE MENU -->
+
+  <div
+    id="mobileMenu"
+    class="hidden md:hidden border-t border-white/10 bg-black/95"
+  >
+
+    <div class="px-5 py-5 space-y-2">
+
+      <a
+        href="HOME.html"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Home
+      </a>
+
+      <a
+        href="ABOUT.html"
+        class="block px-4 py-3 rounded-xl bg-yellow-500/10 text-yellow-400"
+      >
+        About
+      </a>
+
+      <a
+        href="HOME.html#services"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Services
+      </a>
+
+      <a
+        href="HOME.html#portfolio"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Portfolio
+      </a>
+
+      <a
+        href="CONTACT US.html"
+        class="block px-4 py-3 rounded-xl hover:bg-white/5"
+      >
+        Contact
+      </a>
+
+    </div>
+
   </div>
 
-  <!-- Hamburger -->
-  <button onclick="toggleMenu()" id="hamburger" class="hamburger md:hidden">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</nav>
+</header>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden bg-yellow-700 text-center md:hidden">
-  <a href="HOME.html" class="block py-3 hover:bg-yellow-600">Home</a>
-  <a href="ABOUT.html" class="block py-3 hover:bg-yellow-600">About</a>
-  <a href="CONTACT US.html" class="block py-3 hover:bg-yellow-600">Contact</a>
-</div>
 
-<!-- ================= HERO ================= -->
-<section class="p-10 text-center fade-up">
-  <h2 class="text-4xl md:text-5xl font-bold text-yellow-400">About VT DESIGN</h2>
-  <p class="mt-6 text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    I am an undergraduate creative designer from Nigeria with over
-    <span class="text-yellow-300 font-bold">3 years of experience</span> in graphic design.
-    I specialize in creating strong visuals that help brands stand out, communicate clearly,
-    and look professional.
-  </p>
-  <p class="mt-4 text-gray-400 italic">
-    “Young mind. Bold vision. Creative future.”
-  </p>
-</section>
 
-<!-- ================= JOURNEY ================= -->
-<section class="p-10 bg-gray-900 text-center fade-up">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-4">My Journey</h2>
-  <p class="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-    I started designing at age 12 using only my phone and free tools.
-    From school flyers to real projects for entrepreneurs and artists,
-    I’ve grown into a designer focused on building memorable brand identities.
-  </p>
-</section>
+<!-- =====================================================
+     HERO
+====================================================== -->
 
-<!-- ================= SKILLS ================= -->
-<section class="p-10 text-center fade-up">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-6">Skills & Tools</h2>
+<section class="hero pt-32 pb-24 relative overflow-hidden">
 
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-    <div class="bg-gray-800 p-6 rounded-xl">GIMP</div>
-    <div class="bg-gray-800 p-6 rounded-xl">PHOTOPEA</div>
-    <div class="bg-gray-800 p-6 rounded-xl">PixelLab</div>
-    <div class="bg-gray-800 p-6 rounded-xl">Canva</div>
+  <div class="hero-grid absolute inset-0"></div>
+
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8 relative z-10">
+
+
+    <div
+      class="grid lg:grid-cols-2 gap-16 items-center min-h-[65vh]"
+    >
+
+
+      <!-- TEXT -->
+
+      <div class="reveal">
+
+
+        <div
+          class="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-7"
+        >
+
+          <span
+            class="w-2 h-2 bg-green-400 rounded-full animate-pulse"
+          ></span>
+
+          <span
+            class="text-xs uppercase tracking-[0.18em] text-gray-300"
+          >
+            Get to know me
+          </span>
+
+        </div>
+
+
+        <h1
+          class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05]"
+        >
+
+          Behind the
+
+          <br>
+
+          <span class="gold-text">
+            designs.
+          </span>
+
+        </h1>
+
+
+        <p
+          class="text-gray-400 text-base sm:text-lg leading-8 max-w-xl mt-7"
+        >
+
+          I'm VT DESIGN — a creative designer who believes
+          that good design isn't just about looking beautiful.
+          It's about communicating an idea, creating emotion
+          and making something memorable.
+
+        </p>
+
+
+        <div class="flex flex-wrap gap-4 mt-9">
+
+          <a
+            href="HOME.html#portfolio"
+            class="gold-button px-7 py-3.5 rounded-full font-bold flex items-center gap-2"
+          >
+
+            Explore My Work
+
+            <i
+              data-lucide="arrow-right"
+              class="w-4 h-4"
+            ></i>
+
+          </a>
+
+
+          <a
+            href="CONTACT US.html"
+            class="outline-button px-7 py-3.5 rounded-full font-bold"
+          >
+
+            Let's Talk
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PROFILE -->
+
+      <div
+        class="flex justify-center lg:justify-end reveal"
+      >
+
+        <div class="relative">
+
+
+          <div
+            class="profile-ring w-64 h-64 sm:w-80 sm:h-80"
+          >
+
+            <div
+              class="relative z-10 bg-black p-2 rounded-full w-full h-full"
+            >
+
+              <img
+                src="Untitled designbb.png"
+                alt="VT DESIGN"
+                class="w-full h-full rounded-full object-cover"
+              >
+
+            </div>
+
+          </div>
+
+
+          <!-- EXPERIENCE -->
+
+          <div
+            class="absolute -bottom-5 -left-10 glass rounded-2xl px-5 py-4"
+          >
+
+            <div class="flex items-center gap-3">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-yellow-500/10 flex items-center justify-center"
+              >
+
+                <i
+                  data-lucide="award"
+                  class="text-yellow-400"
+                ></i>
+
+              </div>
+
+              <div>
+
+                <div class="font-black text-lg">
+                  3+
+                </div>
+
+                <div class="text-xs text-gray-500">
+                  Years Experience
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- CREATIVE -->
+
+          <div
+            class="absolute -top-5 -right-10 glass rounded-2xl px-5 py-4"
+          >
+
+            <div class="flex items-center gap-3">
+
+              <div
+                class="w-11 h-11 rounded-xl bg-yellow-500/10 flex items-center justify-center"
+              >
+
+                <i
+                  data-lucide="palette"
+                  class="text-yellow-400"
+                ></i>
+
+              </div>
+
+              <div>
+
+                <div class="font-bold text-sm">
+                  Creative
+                </div>
+
+                <div class="text-xs text-gray-500">
+                  By passion
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <p class="text-gray-400 mt-4">
-    Always learning new tools like Figma & Adobe photoshop.
-  </p>
 </section>
 
-<!-- ================= DESIGN TYPES ================= -->
-<section class="p-10 bg-gray-900 text-center fade-up">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-6">What I Design</h2>
 
-  <div class="flex overflow-x-auto space-x-6 p-4">
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="logo.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Logo Design</p>
+
+<!-- =====================================================
+     INTRO
+====================================================== -->
+
+<section class="py-28">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+    <div
+      class="grid lg:grid-cols-2 gap-16 items-start"
+    >
+
+
+      <div class="reveal">
+
+        <p
+          class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold mb-4"
+        >
+          My Story
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black leading-tight"
+        >
+
+          Young mind.
+
+          <br>
+
+          Bold vision.
+
+          <br>
+
+          <span class="gold-text">
+            Creative future.
+          </span>
+
+        </h2>
+
+      </div>
+
+
+      <div class="reveal space-y-6">
+
+        <p class="text-gray-400 leading-8">
+
+          I started designing at the age of 12 using nothing
+          more than my phone and free design tools.
+
+          What started as curiosity gradually became a serious
+          passion for visual communication.
+
+        </p>
+
+
+        <p class="text-gray-400 leading-8">
+
+          Over the years, I've worked on designs for
+          entrepreneurs, artists, organizations and personal
+          brands — constantly learning, experimenting and
+          improving my craft.
+
+        </p>
+
+
+        <p class="text-gray-400 leading-8">
+
+          Today, VT DESIGNS is focused on creating modern,
+          meaningful and professional visuals that help ideas
+          stand out.
+
+        </p>
+
+      </div>
+
     </div>
 
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="poster.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Flyers & Posters</p>
-    </div>
-
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="branding.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Brand Identity</p>
-    </div>
-
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="socialmedia.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Social Media Graphics</p>
-    </div>
-
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="albumcover.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Album Covers</p>
-    </div>
-
-    <div class="min-w-[230px] bg-gray-800 p-4 rounded-xl shadow-lg">
-      <img src="websiteconcept.jpg" class="rounded-lg mb-3">
-      <p class="text-yellow-300 font-bold">Website Concepts</p>
-    </div>
   </div>
+
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
-<section class="p-10 text-center fade-up">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-6">What Clients Say</h2>
 
-  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-    <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Creative and professional.”
-      <div class="mt-4 text-yellow-300 font-bold">— Sarah</div>
+
+<!-- =====================================================
+     JOURNEY
+====================================================== -->
+
+<section class="py-28 bg-[#080808]">
+
+  <div class="max-w-5xl mx-auto px-5 lg:px-8">
+
+
+    <div class="text-center reveal">
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        The Journey
+      </p>
+
+      <h2
+        class="text-4xl sm:text-5xl font-black mt-4"
+      >
+
+        How it all
+
+        <span class="gold-text">
+          started.
+        </span>
+
+      </h2>
+
     </div>
-    <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Turned my idea into magic.”
-      <div class="mt-4 text-yellow-300 font-bold">— Daniel</div>
+
+
+    <div class="relative mt-16">
+
+
+      <div class="timeline-line"></div>
+
+
+      <!-- ITEM -->
+
+      <div
+        class="relative flex gap-7 pb-14 reveal"
+      >
+
+        <div
+          class="relative z-10 flex-shrink-0 w-[50px] h-[50px] rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center"
+        >
+
+          <span
+            class="text-yellow-400 font-bold text-sm"
+          >
+            01
+          </span>
+
+        </div>
+
+
+        <div class="glass rounded-2xl p-6 flex-1">
+
+          <span class="text-yellow-400 text-xs uppercase tracking-widest">
+            Age 12
+          </span>
+
+          <h3 class="text-xl font-bold mt-2">
+            The Beginning
+          </h3>
+
+          <p class="text-gray-500 text-sm leading-7 mt-3">
+
+            I discovered graphic design and started
+            experimenting with designs using my phone
+            and free tools.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- ITEM -->
+
+      <div
+        class="relative flex gap-7 pb-14 reveal"
+      >
+
+        <div
+          class="relative z-10 flex-shrink-0 w-[50px] h-[50px] rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center"
+        >
+
+          <span class="text-yellow-400 font-bold text-sm">
+            02
+          </span>
+
+        </div>
+
+
+        <div class="glass rounded-2xl p-6 flex-1">
+
+          <span class="text-yellow-400 text-xs uppercase tracking-widest">
+            Growth
+          </span>
+
+          <h3 class="text-xl font-bold mt-2">
+            Learning & Experimenting
+          </h3>
+
+          <p class="text-gray-500 text-sm leading-7 mt-3">
+
+            I began exploring different design styles,
+            tools and techniques while working on personal
+            and school projects.
+
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <!-- ITEM -->
+
+      <div
+        class="relative flex gap-7 reveal"
+      >
+
+        <div
+          class="relative z-10 flex-shrink-0 w-[50px] h-[50px] rounded-full bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center"
+        >
+
+          <span class="text-yellow-400 font-bold text-sm">
+            03
+          </span>
+
+        </div>
+
+
+        <div class="glass rounded-2xl p-6 flex-1">
+
+          <span class="text-yellow-400 text-xs uppercase tracking-widest">
+            Today
+          </span>
+
+          <h3 class="text-xl font-bold mt-2">
+            VT DESIGNS
+          </h3>
+
+          <p class="text-gray-500 text-sm leading-7 mt-3">
+
+            What started as a hobby has grown into a creative
+            brand focused on helping people and businesses
+            communicate through powerful visual design.
+
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
-    <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Strong visual impact.”
-      <div class="mt-4 text-yellow-300 font-bold">— Chinedu</div>
-    </div>
-    <div class="bg-gray-800 p-6 rounded-xl italic">
-      “Future of African creativity.”
-      <div class="mt-4 text-yellow-300 font-bold">— Casten Artzz</div>
-    </div>
+
   </div>
+
 </section>
 
-<!-- ================= CTA ================= -->
-<section class="p-10 text-center fade-up">
-  <h2 class="text-3xl font-bold text-yellow-400 mb-4">Let’s Work Together</h2>
-  <p class="text-gray-300 mb-6">Have an idea? Let’s bring it to life.</p>
 
-  <a href="https://wa.me/2348038137679" target="_blank"
-     class="bg-yellow-500 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-400 transition">
-     💬 Message Me on WhatsApp
-  </a>
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section class="py-28">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+    <div class="grid lg:grid-cols-2 gap-16">
+
+
+      <div class="reveal">
+
+        <p
+          class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+        >
+          Skills & Tools
+        </p>
+
+        <h2
+          class="text-4xl sm:text-5xl font-black mt-4"
+        >
+
+          Tools change.
+
+          <br>
+
+          <span class="gold-text">
+            Creativity stays.
+          </span>
+
+        </h2>
+
+        <p
+          class="text-gray-500 leading-7 mt-6 max-w-lg"
+        >
+
+          I'm constantly learning new tools and techniques
+          to improve the quality of my work and stay current
+          with modern design trends.
+
+        </p>
+
+      </div>
+
+
+      <div
+        class="grid grid-cols-2 gap-4 reveal"
+      >
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="image"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            GIMP
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            Image Editing
+          </p>
+
+        </div>
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="wand-sparkles"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            Photopea
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            Design & Editing
+          </p>
+
+        </div>
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="smartphone"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            PixelLab
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            Mobile Design
+          </p>
+
+        </div>
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="layout-template"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            Canva
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            Visual Design
+          </p>
+
+        </div>
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="figma"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            Figma
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            UI / UX
+          </p>
+
+        </div>
+
+
+        <div class="skill-card glass rounded-2xl p-6">
+
+          <div class="text-yellow-400 mb-4">
+
+            <i data-lucide="layers"></i>
+
+          </div>
+
+          <h3 class="font-bold">
+            Photoshop
+          </h3>
+
+          <p class="text-xs text-gray-500 mt-2">
+            Advanced Editing
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-black text-center text-gray-400 py-4">
-  © 2025 VT DESIGN | Built with passion
+
+
+<!-- =====================================================
+     WHAT I DESIGN
+====================================================== -->
+
+<section class="py-28 bg-[#080808]">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+    <div class="text-center reveal">
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        What I Create
+      </p>
+
+      <h2
+        class="text-4xl sm:text-5xl font-black mt-4"
+      >
+
+        Design for
+
+        <span class="gold-text">
+          every idea.
+        </span>
+
+      </h2>
+
+    </div>
+
+
+    <div
+      class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-14"
+    >
+
+
+      <!-- LOGO -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="logo.jpg"
+          alt="Logo Design"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Branding
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Logo Design
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- POSTER -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="poster.jpg"
+          alt="Flyers and Posters"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Print
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Flyers & Posters
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- BRANDING -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="branding.jpg"
+          alt="Brand Identity"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Identity
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Brand Identity
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- SOCIAL -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="socialmedia.jpg"
+          alt="Social Media Design"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Digital
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Social Media Graphics
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- ALBUM -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="albumcover.jpg"
+          alt="Album Cover"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Music
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Album Covers
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- WEB -->
+
+      <div class="design-card reveal">
+
+        <img
+          src="websiteconcept.jpg"
+          alt="Website Design"
+        >
+
+        <div class="design-overlay">
+
+          <div>
+
+            <span
+              class="text-yellow-400 text-xs uppercase tracking-widest"
+            >
+              Digital
+            </span>
+
+            <h3 class="text-xl font-bold mt-1">
+              Website Concepts
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TESTIMONIALS
+====================================================== -->
+
+<section class="py-28">
+
+  <div class="max-w-7xl mx-auto px-5 lg:px-8">
+
+
+    <div class="text-center reveal">
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        Client Feedback
+      </p>
+
+      <h2
+        class="text-4xl sm:text-5xl font-black mt-4"
+      >
+
+        Words from
+
+        <span class="gold-text">
+          clients.
+        </span>
+
+      </h2>
+
+    </div>
+
+
+    <div
+      class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mt-14"
+    >
+
+
+      <div class="glass rounded-3xl p-7 reveal">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <p
+          class="text-gray-400 leading-7 -mt-4"
+        >
+          Creative and professional.
+        </p>
+
+        <div class="border-t border-white/5 mt-6 pt-5">
+
+          <p class="font-bold">
+            Sarah
+          </p>
+
+          <p class="text-xs text-gray-600 mt-1">
+            Client
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="glass rounded-3xl p-7 reveal">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <p
+          class="text-gray-400 leading-7 -mt-4"
+        >
+          Turned my idea into magic.
+        </p>
+
+        <div class="border-t border-white/5 mt-6 pt-5">
+
+          <p class="font-bold">
+            Daniel
+          </p>
+
+          <p class="text-xs text-gray-600 mt-1">
+            Client
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="glass rounded-3xl p-7 reveal">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <p
+          class="text-gray-400 leading-7 -mt-4"
+        >
+          Strong visual impact.
+        </p>
+
+        <div class="border-t border-white/5 mt-6 pt-5">
+
+          <p class="font-bold">
+            Chinedu
+          </p>
+
+          <p class="text-xs text-gray-600 mt-1">
+            Client
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="glass rounded-3xl p-7 reveal">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <p
+          class="text-gray-400 leading-7 -mt-4"
+        >
+          Future of African creativity.
+        </p>
+
+        <div class="border-t border-white/5 mt-6 pt-5">
+
+          <p class="font-bold">
+            Casten Artzz
+          </p>
+
+          <p class="text-xs text-gray-600 mt-1">
+            Client
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+====================================================== -->
+
+<section class="px-5 py-20">
+
+  <div
+    class="max-w-6xl mx-auto relative overflow-hidden rounded-[2rem] border border-yellow-500/20 bg-gradient-to-br from-yellow-500/10 to-transparent p-10 sm:p-16 text-center reveal"
+  >
+
+
+    <div
+      class="absolute w-80 h-80 bg-yellow-500/10 rounded-full blur-3xl -top-40 left-1/2 -translate-x-1/2"
+    ></div>
+
+
+    <div class="relative">
+
+
+      <p
+        class="text-yellow-400 text-xs uppercase tracking-[0.3em] font-bold"
+      >
+        Have an idea?
+      </p>
+
+
+      <h2
+        class="text-4xl sm:text-6xl font-black mt-5"
+      >
+
+        Let's build something
+
+        <span class="gold-text">
+          great.
+        </span>
+
+      </h2>
+
+
+      <p
+        class="text-gray-500 max-w-xl mx-auto mt-5 leading-7"
+      >
+
+        Whether you need a logo, social media design,
+        flyer, branding or a complete digital experience,
+        let's turn your idea into something memorable.
+
+      </p>
+
+
+      <div
+        class="flex flex-wrap justify-center gap-4 mt-9"
+      >
+
+
+        <a
+          href="https://wa.me/2348038137679"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gold-button px-7 py-3.5 rounded-full font-bold flex items-center gap-2"
+        >
+
+          <i
+            data-lucide="message-circle"
+            class="w-5 h-5"
+          ></i>
+
+          Message Me
+
+        </a>
+
+
+        <a
+          href="CONTACT US.html"
+          class="outline-button px-7 py-3.5 rounded-full font-bold"
+        >
+
+          Contact Page
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer class="border-t border-white/5 bg-[#030303]">
+
+  <div
+    class="max-w-7xl mx-auto px-5 lg:px-8 py-14"
+  >
+
+
+    <div
+      class="grid md:grid-cols-3 gap-10"
+    >
+
+
+      <!-- BRAND -->
+
+      <div>
+
+        <div class="flex items-center gap-3">
+
+          <div
+            class="w-10 h-10 rounded-full overflow-hidden border border-yellow-500/50"
+          >
+
+            <img
+              src="Untitled designbb.png"
+              alt="VT Designs"
+              class="w-full h-full object-cover"
+            >
+
+          </div>
+
+          <span class="font-black">
+
+            VT
+            <span class="text-yellow-400">
+              DESIGNS
+            </span>
+
+          </span>
+
+        </div>
+
+
+        <p
+          class="text-gray-600 text-sm leading-7 mt-5 max-w-sm"
+        >
+
+          Turning ideas, dreams and visions into
+          stunning visual experiences.
+
+        </p>
+
+      </div>
+
+
+      <!-- NAV -->
+
+      <div>
+
+        <h3
+          class="font-bold text-sm uppercase tracking-widest"
+        >
+          Navigation
+        </h3>
+
+
+        <div
+          class="space-y-3 mt-5 text-sm text-gray-500"
+        >
+
+          <a
+            href="HOME.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="ABOUT.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            About
+          </a>
+
+          <a
+            href="HOME.html#services"
+            class="block hover:text-yellow-400 transition"
+          >
+            Services
+          </a>
+
+          <a
+            href="HOME.html#portfolio"
+            class="block hover:text-yellow-400 transition"
+          >
+            Portfolio
+          </a>
+
+          <a
+            href="CONTACT US.html"
+            class="block hover:text-yellow-400 transition"
+          >
+            Contact
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONNECT -->
+
+      <div>
+
+        <h3
+          class="font-bold text-sm uppercase tracking-widest"
+        >
+          Let's Connect
+        </h3>
+
+
+        <p
+          class="text-gray-600 text-sm mt-5 leading-7"
+        >
+          Ready to bring your next idea to life?
+        </p>
+
+
+        <a
+          href="https://wa.me/2348038137679"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-yellow-400 font-semibold text-sm mt-4"
+        >
+
+          WhatsApp Me
+
+          <i
+            data-lucide="arrow-up-right"
+            class="w-4 h-4"
+          ></i>
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div
+      class="border-t border-white/5 mt-12 pt-7 flex flex-col sm:flex-row justify-between gap-4 text-xs text-gray-600"
+    >
+
+      <p>
+        © 2026 VT DESIGNS. All Rights Reserved.
+      </p>
+
+      <p>
+        Designed & Built by VT DESIGNS
+      </p>
+
+    </div>
+
+  </div>
+
 </footer>
 
-<!-- ================= JS ================= -->
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  const burger = document.getElementById("hamburger");
-  menu.classList.toggle("hidden");
-  burger.classList.toggle("active");
-}
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add("show");
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+  /* =========================
+     ICONS
+  ========================== */
+
+  lucide.createIcons();
+
+
+
+  /* =========================
+     MOBILE MENU
+  ========================== */
+
+  function toggleMenu() {
+
+    const menu =
+      document.getElementById("mobileMenu");
+
+    menu.classList.toggle("hidden");
+
+  }
+
+
+
+  /* =========================
+     SCROLL REVEAL
+  ========================== */
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+
+  const observer =
+    new IntersectionObserver(
+
+      (entries) => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("active");
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+
+      {
+        threshold: 0.12
+      }
+
+    );
+
+
+  revealElements.forEach(element => {
+
+    observer.observe(element);
+
   });
-});
-document.querySelectorAll(".fade-up").forEach(el => observer.observe(el));
+
+
 </script>
 
-</body>
-</html>
 
+</body>
+
+</html>
+```
